@@ -1,0 +1,241 @@
+:root {
+	--red500: red;
+	--gold500: gold;
+	--black500: black;
+	--white500: white;
+	--max-width: 1200px;
+	--small-btn-padding: 10px 25px;
+	--big-btn-padding: 12px 70px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	line-height: 1.5;
+}
+
+button {
+	border: none;
+	padding: var(--small-btn-padding);
+	transition: 0.2s ease-in-out;
+}
+
+button:hover {
+	opacity: 0.8;
+	transition: 0.2s ease-in-out;
+}
+
+/* Header Section */
+
+header {
+	background-color: var(--white500);
+	box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.08);
+	padding: 20px 0;
+
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: 0 auto; 
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav .nav_logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	color: var(--black500);
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.primary_btn {
+	background-color: var(--red500);
+	color: var(--white500);
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+/* Hero Section */
+
+.hero {
+	background-image: url(image/burger.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.hero .container {
+	color: var(--white500);
+	min-height: 600px;
+	margin: auto;
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;
+	gap: 25px;
+}
+
+.hero_tag {
+	background-color: var(--gold500);
+	color: var(--white500);
+	padding: 4px 6px;
+	align-self: flex-start;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.hero h1 {
+	font-size: 80px;
+}
+
+.hero p {
+	max-width: 50%;
+}
+
+.hero .primary_btn {
+	align-self: flex-start;
+	padding: var(--big-btn-padding);
+	font-size: 12px;
+}
+
+/* Hero: More Section */
+
+.more {
+	margin: 80px 0;
+}
+
+.grid_first {
+	grid-area: fd1; 
+	background-image: url(image/pizza.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: var(--white500);
+	height: 420px;
+	padding: 50px;
+}
+
+.grid_second {
+	grid-area: fd2; 
+	background-image: url(image/food.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: var(--white500);
+	padding: 50px;
+}
+
+.grid_third {
+	grid-area: fd3; 
+	background-image: url(image/food2.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: var(--white500);
+	padding: 50px;
+}
+
+.more .container {
+	display: grid; 
+	grid-template-areas: 
+	"fd1 fd2"
+	"fd1 fd3"; 
+	gap: 15px;
+}
+
+/* Hero : Choose Food Section */
+
+.choose_food {
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.choose_food .container {
+	display: grid;
+	place-items: center;
+	gap: 10px;
+	text-align: center;
+}
+
+.choose_food h1 {
+	font-size: 30px;
+}
+
+.choose_food .divider {
+	height: 2px;
+	width: 50px;
+	background-color: var(--black500);
+}
+
+.food_icons {
+	margin: 30px 0 40px 0;
+	display: flex;
+	gap: 30px;
+}
+
+.food_icons a {
+	font-size: 12px;
+	color: var(--black500);
+}
+
+/* Hero : Category Section */
+
+.category {
+	margin-bottom: 80px;
+}
+
+.category .container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	gap: 20px;
+}
+
+.category .burger {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.burger .primary_btn {
+	align-self: center;
+}
+
+/* Footer */
+
+footer {
+	background-color: var(--black500);
+	color: var(--white500);
+	padding: 20px;
+	text-align: center;
+}
